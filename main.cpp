@@ -6,6 +6,7 @@
 #include "list.hpp"
 #include "forward_list.hpp"
 
+//вывод любого контейнера
 template <typename Container>
 void print_container(const Container& c) {
     for (size_t i = 0; i < c.size(); ++i) std::cout << c[i] << " ";
@@ -19,6 +20,7 @@ void demo(Container& c, const std::string& title) {
     print_container(c);
     std::cout << "size = " << c.size() << std::endl;    
 
+    // удаление с конца из-за смещения индексов
     c.erase(6);   
     c.erase(4);   
     c.erase(2);   

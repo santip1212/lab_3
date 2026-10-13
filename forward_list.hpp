@@ -8,7 +8,7 @@ class forward_list {
 private:
     struct Node {
         T data;
-        Node* next;
+        Node* next; // только следующий
         Node(const T& val) : data(val), next(nullptr) {}
         Node(T&& val) : data(std::move(val)), next(nullptr) {}
     };
@@ -57,7 +57,7 @@ public:
     iterator end()   { return iterator(nullptr); }
 
 private:
-    void clear();
+    void clear(); // удаляем все узлы
 };
 
 template <typename T>

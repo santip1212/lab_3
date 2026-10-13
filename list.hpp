@@ -3,13 +3,14 @@
 #include <stdexcept>
 #include <utility>
 
+// двунаправленный список
 template <typename T>
 class list {
 private:
     struct Node {
-        T data;
-        Node* prev;
-        Node* next;
+        T data; // данные пользователя
+        Node* prev; // предыдущий узел
+        Node* next; // следующий узел
         Node(const T& val) : data(val), prev(nullptr), next(nullptr) {}
         Node(T&& val)      : data(std::move(val)), prev(nullptr), next(nullptr) {}
     };
@@ -21,7 +22,7 @@ private:
 public:
     class iterator {
     private:
-        Node* curr;
+        Node* curr; // итератор списка
     public:
         iterator() : curr(nullptr) {}
         explicit iterator(Node* n) : curr(n) {}

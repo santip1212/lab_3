@@ -6,9 +6,9 @@
 template <typename T>
 class dynamicarry {
 private:
-    std::unique_ptr<T[]> data;
-    size_t sizearry;
-    size_t capacityarry;
+    std::unique_ptr<T[]> data; // владелец массива
+    size_t sizearry; // кол-во элемнтов занято
+    size_t capacityarry; // выделенная память
 
 public:
     using iterator = T*;

@@ -13,7 +13,7 @@ private:
     void allocate();
 
 public:
-    using iterator = T*;
+    using iterator = T*; // итератор - указатель
     using const_iterator = const T*;
 
     explicit newdynamicarry();
